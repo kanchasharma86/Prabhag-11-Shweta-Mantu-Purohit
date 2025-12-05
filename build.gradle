@@ -1,6 +1,17 @@
 
-buildscript {
-    repositories { google(); mavenCentral() }
-    dependencies { classpath 'com.android.tools.build:gradle:7.4.2' }
+plugins { id 'com.android.application' }
+android {
+  namespace 'com.prabhag11.app'
+  compileSdk 34
+  defaultConfig {
+    applicationId "com.prabhag11.app"
+    minSdk 21
+    targetSdk 34
+    versionCode 1
+    versionName "1.0"
+  }
 }
-allprojects { repositories { google(); mavenCentral() } }
+dependencies {
+  implementation 'androidx.appcompat:appcompat:1.6.1'
+  implementation 'androidx.core:core-ktx:1.10.1'
+}
